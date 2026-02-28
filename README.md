@@ -1,12 +1,12 @@
-# /second-opinion — Cross-Model Code Review for Claude Code
+# double-agent
 
-A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) slash command that gets a second opinion from [OpenAI Codex CLI](https://github.com/openai/codex). Two AI models from different families reviewing the same code catches more issues than either alone.
+Two AI coding CLIs. One terminal. [Claude Code](https://docs.anthropic.com/en/docs/claude-code) runs your session — then calls in [OpenAI Codex CLI](https://github.com/openai/codex) for an independent second opinion. Both agents work for you.
 
-## Why?
+## Why two agents?
 
-AI models have correlated blind spots — the same training approach produces similar failure modes. A review from a *different* model family has uncorrelated blind spots, so issues one misses, the other catches.
+AI models have correlated blind spots — same training approach, similar failure modes. A second agent from a *different model family* has uncorrelated blind spots: what one misses, the other catches.
 
-After Codex returns its analysis, Claude synthesizes a **Cross-Model Delta** — where both models agree (high confidence), where they disagree (genuine trade-offs), and what gaps remain.
+After Codex returns its analysis, Claude synthesizes a **Cross-Model Delta** — where both agents agree (high confidence), where they disagree (genuine trade-offs), and what gaps remain.
 
 ## What it does
 
@@ -46,11 +46,11 @@ Copy-Item commands\second-opinion.md "$env:USERPROFILE\.claude\commands\"
 **Or with git clone:**
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/claude-second-opinion.git
+git clone https://github.com/matlugert/double-agent.git
 # macOS/Linux:
-cp claude-second-opinion/commands/second-opinion.md ~/.claude/commands/
+cp double-agent/commands/second-opinion.md ~/.claude/commands/
 # Windows:
-Copy-Item claude-second-opinion\commands\second-opinion.md "$env:USERPROFILE\.claude\commands\"
+Copy-Item double-agent\commands\second-opinion.md "$env:USERPROFILE\.claude\commands\"
 ```
 
 Then restart Claude Code (or start a new session). The `/second-opinion` command will be available.
