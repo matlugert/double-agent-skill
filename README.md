@@ -98,6 +98,16 @@ The command file is plain markdown. You can:
 - Adjust the Cross-Model Delta format
 - Add additional modes for your workflow
 
+## Terms of service note
+
+This command has Claude Code invoke OpenAI's Codex CLI and process its output at runtime. Before using, you should be aware of the relevant terms:
+
+- **Anthropic / Claude Code:** No restriction on invoking external CLI tools — that's what Bash commands and MCP servers are for. Anthropic's restrictions concern the reverse direction (third-party tools accessing Claude's OAuth tokens).
+- **OpenAI API terms:** OpenAI's [Services Agreement](https://openai.com/policies/services-agreement/) prohibits using API output "to develop AI models that compete with OpenAI." Whether a competing AI reading and synthesizing Codex output at runtime (not for training) falls under this clause is ambiguous. The clause targets model development, not end-user tooling — but it's broadly worded.
+- **Codex CLI itself:** [Apache 2.0 open source](https://github.com/openai/codex) — no usage restrictions on the software.
+
+**In short:** This is a developer productivity tool, not model training. You're doing what any developer does when they compare answers from two AI tools — just automated. But the terms are broad enough that you should read them yourself and make your own judgment. This section is informational, not legal advice.
+
 ## License
 
 MIT
