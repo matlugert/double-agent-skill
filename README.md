@@ -160,6 +160,10 @@ This tool has one AI coding CLI invoke the other and process its output at runti
 
 **In short:** This is a developer productivity tool, not model training. You're automating what any developer does when they compare answers from two AI tools. But the terms are broadly worded — read them yourself and make your own judgment. This section is informational, not legal advice.
 
+## Author
+
+[Matthias Lugert](https://github.com/matlugert)
+
 ## License
 
 MIT
